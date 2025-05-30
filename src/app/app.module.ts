@@ -9,6 +9,9 @@ import { InterpolationComponent } from './components/interpolation/interpolation
 import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { StyleBindingComponent } from './components/style-binding/style-binding.component';
+import { CommonModule } from '@angular/common';
+import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +19,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TestComponent,
     InterpolationComponent,
     PropertyBindingComponent,
+    StyleBindingComponent,
+    ClassBindingComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

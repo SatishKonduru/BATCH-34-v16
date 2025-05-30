@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './property-binding.component.html',
   styleUrls: ['./property-binding.component.css'],
 })
-export class PropertyBindingComponent {}
+export class PropertyBindingComponent {
+  isDisabled = false;
+}
