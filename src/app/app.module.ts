@@ -12,6 +12,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { StyleBindingComponent } from './components/style-binding/style-binding.component';
 import { CommonModule } from '@angular/common';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
+import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
     PropertyBindingComponent,
     StyleBindingComponent,
     ClassBindingComponent,
+    EventBindingComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +34,9 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
