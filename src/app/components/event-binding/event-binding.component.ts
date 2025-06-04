@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
+import { MatRadioChange } from '@angular/material/radio';
 import { MatSelectChange } from '@angular/material/select';
 
 @Component({
@@ -14,6 +15,12 @@ export class EventBindingComponent {
   inputValue = '';
   selectedValue = '';
   isChecked = false;
+  selectedGender = '';
+  keyUpValue = '';
+  keyDownValue = '';
+  keyEnterValue = '';
+  foucsStatus = '';
+  contextValue = '';
   getName() {
     this.name = 'SATISH';
   }
@@ -41,5 +48,41 @@ export class EventBindingComponent {
 
   onCheckBoxChange(e: MatCheckboxChange) {
     this.isChecked = e.checked;
+  }
+
+  onGenderChange(e: MatRadioChange) {
+    // console.log(e.value);
+    this.selectedGender = e.value;
+  }
+
+  onKeyUp(e: KeyboardEvent) {
+    // console.log(e);
+    this.keyUpValue = e.key;
+  }
+
+  onKeyDown(e: KeyboardEvent) {
+    this.keyDownValue = e.key;
+  }
+
+  onEnterKey = (e: KeyboardEvent) => {
+    this.keyEnterValue = 'Enter Key Pressed';
+  };
+
+  onFocus = () => {
+    this.foucsStatus = 'Input Got Focus';
+  };
+
+  onBlur = () => {
+    this.foucsStatus = 'Input LOST focus';
+  };
+
+  onMouseOver = () => console.log('Mouse Over');
+  onMouseEnter = () => console.log('Mouse Enter');
+  onMouseLeave = () => console.log('Mouse Leave');
+
+  onRightClick(e: MouseEvent) {
+    console.log(e);
+    e.preventDefault();
+    this.contextValue = 'Right Clicked';
   }
 }
