@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
+import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-ref-variables.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MatRadioModule } from '@angular/material/radio';
     StyleBindingComponent,
     ClassBindingComponent,
     EventBindingComponent,
+    TempRefVariablesComponent,
   ],
   imports: [
     CommonModule,

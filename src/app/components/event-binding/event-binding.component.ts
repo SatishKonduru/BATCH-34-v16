@@ -21,6 +21,8 @@ export class EventBindingComponent {
   keyEnterValue = '';
   foucsStatus = '';
   contextValue = '';
+  dragStatus = '';
+  scrollStatus = '';
   getName() {
     this.name = 'SATISH';
   }
@@ -85,4 +87,29 @@ export class EventBindingComponent {
     e.preventDefault();
     this.contextValue = 'Right Clicked';
   }
+
+  onDragStart = (e: DragEvent) => {
+    this.dragStatus = 'Dragging Started';
+    e.dataTransfer?.setData('text/plain', 'dragItem');
+  };
+  onDragOver = (e: DragEvent) => {
+    e.preventDefault(); //To Allow Dropping
+    this.dragStatus = 'Over the Drop Zone';
+  };
+  onDrop = (e: DragEvent) => {
+    e.preventDefault();
+    const draggedElementId = e.dataTransfer?.getData('text/plain');
+    const draggedElement = document.getElementById(draggedElementId!); // ! => Non-Null Assertion operator in TS
+    const dropZone = document.getElementById('dropZone');
+    if (draggedElementId && dropZone) {
+      dropZone.appendChild(draggedElement);
+      this.dragStatus = 'Dropped and Moved Successfully';
+    } else {
+      this.dragStatus = 'Dropped Fail';
+    }
+  };
+
+  onScroll = (e: Event) => {
+    this.scrollStatus = 'You Scrolled';
+  };
 }
