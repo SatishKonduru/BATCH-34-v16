@@ -1,0 +1,26 @@
+<div style="display: flex; justify-content: center">
+  <p style="font-size: 25px; color: purple">*ngIf</p>
+</div>
+<!-- <p *ngIf="isLoggedIn; else loggedOut">Welcome User</p>
+
+<ng-template #loggedOut> Please Login first </ng-template> -->
+<!--
+<ng-container
+  *ngIf="isLoading; then loadingBlock; else contentBlock"
+></ng-container>
+
+<ng-template #loadingBlock>Loding Data.....</ng-template>
+<ng-template #contentBlock>Data Found Successfully</ng-template> -->
+
+<!-- <p *ngIf="user as u">{{ u.name }}</p> -->
+<!--
+<div *ngIf="isAdmin">Admin dashboard</div>
+<div *ngIf="isUser && !isAdmin">User dashboard</div> -->
+
+<mat-form-field appearance="outline">
+  <mat-label>Username: </mat-label>
+  <input matInput [(ngModel)]="username" />
+</mat-form-field>
+<p style="color: red" *ngIf="username.length <= 3">
+  Username must have atleast 3 characters of length
+</p>

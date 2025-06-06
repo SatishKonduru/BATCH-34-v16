@@ -18,6 +18,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-ref-variables.component';
+import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { IfComponent } from './components/if/if.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-
     ClassBindingComponent,
     EventBindingComponent,
     TempRefVariablesComponent,
+    TwoWayDataBindingComponent,
+    IfComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +46,7 @@ import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-
     MatSelectModule,
     MatCheckboxModule,
     MatRadioModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
