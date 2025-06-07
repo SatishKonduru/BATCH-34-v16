@@ -1,0 +1,55 @@
+<div style="display: flex; justify-content: center">
+  <p style="font-size: 25px; color: purple">*ngSwitch</p>
+</div>
+<div class="container">
+  <div [ngSwitch]="userRole">
+    <div *ngSwitchCase="'user'">
+      <p>Welcome User</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+        doloribus officiis explicabo eaque deleniti optio magni aliquid modi,
+        nemo provident rem error ab, sequi reiciendis corrupti expedita ipsum
+        recusandae repellendus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint,
+        hic porro sed minus facilis delectus fugit autem quibusdam libero
+        molestiae earum blanditiis, expedita alias, natus nobis ea saepe
+        cupiditate?
+      </p>
+    </div>
+    <p *ngSwitchCase="'admin'">Welcome Admin</p>
+    <p *ngSwitchCase="'guest'">Welcome Guest</p>
+    <p *ngSwitchDefault>Unknown Role</p>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Select your Color</mat-label>
+    <mat-select [(ngModel)]="color">
+      <mat-option value="Red">RED</mat-option>
+      <mat-option value="Green">Green</mat-option>
+      <mat-option value="Blue">Blue</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div [ngSwitch]="color">
+    <p *ngSwitchCase="'Red'" style="color: red">You Selected RED Color</p>
+    <p *ngSwitchCase="'Green'" style="color: green">You Selected GREEN Color</p>
+    <p *ngSwitchCase="'Blue'" style="color: blue">You Selected BLUE Color</p>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Select your Payment Method</mat-label>
+    <mat-select [(ngModel)]="paymentMethod">
+      <mat-option value="Credit">Credit</mat-option>
+      <mat-option value="PayPal">PayPal</mat-option>
+      <mat-option value="UPI">UPI</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div [ngSwitch]="paymentMethod">
+    <p *ngSwitchCase="'Credit'">Enter your Credit Card Details</p>
+    <p *ngSwitchCase="'PayPal'">Login with PayPal Account</p>
+    <p *ngSwitchCase="'UPI'">Enter your UPI Id</p>
+  </div>
+</div>

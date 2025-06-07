@@ -21,6 +21,7 @@ import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
+import { SwitchComponent } from './components/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { IfComponent } from './components/if/if.component';
     TempRefVariablesComponent,
     TwoWayDataBindingComponent,
     IfComponent,
+    SwitchComponent,
   ],
   imports: [
     CommonModule,
