@@ -1,0 +1,68 @@
+<div style="display: flex; justify-content: center">
+  <p style="font-size: 25px; color: purple">*ngFor</p>
+</div>
+<div class="container">
+  <ul>
+    <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let fruit of fruits; index as i">{{ i + 1 }} : {{ fruit }}</li>
+  </ul>
+
+  <!-- First/ Last / Even / Odd -->
+  <ul>
+    <li
+      *ngFor="
+        let user of users;
+        first as isFirst;
+        last as isLast;
+        even as isEven;
+        odd as isOdd
+      "
+    >
+      {{ user.name }}
+      <span *ngIf="isFirst">(First)</span>
+      <span *ngIf="isLast">(Last)</span>
+      <span *ngIf="isEven">(at Even Position)</span>
+      <span *ngIf="isOdd">(at Odd Position)</span>
+    </li>
+  </ul>
+
+  <!-- <ul>
+    <li *ngFor="let product of products">
+      <span *ngIf="product.inStock">{{ product.name }}</span>
+    </li>
+  </ul> -->
+  <ul>
+    <ng-container *ngFor="let product of products">
+      <li *ngIf="product.inStock">{{ product.name }}</li>
+    </ng-container>
+  </ul>
+
+  <div *ngFor="let category of categories">
+    <h4>{{ category.name }}</h4>
+    <ul>
+      <li *ngFor="let item of category.items">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of myObj | keyvalue">
+      {{ item.key }} : {{ item.value }}
+    </li>
+  </ul>
+
+  <mat-form-field appearance="outline">
+    <mat-select [(ngModel)]="selectedCity" multiple>
+      <mat-option value="" disabled>Select City</mat-option>
+      <mat-option *ngFor="let city of cities" [value]="city">{{
+        city
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p>Selected City: {{ selectedCity }}</p>
+</div>
