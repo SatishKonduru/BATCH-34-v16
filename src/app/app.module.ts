@@ -23,6 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { ForComponent } from './components/for/for.component';
+import { SenderComponent } from './components/sender/sender.component';
+import { ReceiverComponent } from './components/receiver/receiver.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { ForComponent } from './components/for/for.component';
     IfComponent,
     SwitchComponent,
     ForComponent,
+    SenderComponent,
+    ReceiverComponent,
   ],
   imports: [
     CommonModule,
