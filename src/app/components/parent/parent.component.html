@@ -1,0 +1,13 @@
+<app-topic [topic]="topicName"></app-topic>
+
+<div class="container">
+  <div style="border: 2px solid blue; padding: 10px">
+    <h3>👨🏼 I am Parent Component</h3>
+    <!-- Projectng Child Component -->
+    <app-child></app-child>
+    <button mat-raised-button color="primary" (click)="callChildMethod()">
+      Call Child Method
+    </button>
+    <p>Child's Message(Accessed in Parent): {{ childComp?.childMessage }}</p>
+  </div>
+</div>

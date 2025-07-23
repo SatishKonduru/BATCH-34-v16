@@ -27,6 +27,8 @@ import { SenderComponent } from './components/sender/sender.component';
 import { ReceiverComponent } from './components/receiver/receiver.component';
 import { TopicComponent } from './components/topic/topic.component';
 import { ViewChildComponent } from './components/view-child/view-child.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { ViewChildComponent } from './components/view-child/view-child.component
     ReceiverComponent,
     TopicComponent,
     ViewChildComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     CommonModule,
