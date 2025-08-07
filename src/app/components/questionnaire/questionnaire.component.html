@@ -1,0 +1,8 @@
+<div class="container">
+  <app-question *ngFor="let q of questions" [question]="q"></app-question>
+  <button mat-raised-button (click)="checkAnswers()">
+    Check If All Answered
+  </button>
+  <p *ngIf="allAnswered">✅ All Questions are Answered</p>
+  <p *ngIf="!allAnswered && checked">❌ Some Questions are NOT Answered</p>
+</div>

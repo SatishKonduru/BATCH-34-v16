@@ -10,6 +10,7 @@ export class ParentComponent {
   topicName = '@ViewChild with Component Reference';
   @ViewChild(ChildComponent) childComp: ChildComponent;
 
+
   ngOnInit() {
     console.log(
       'In OnInit, Child message(From Parent)',
