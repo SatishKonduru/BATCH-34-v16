@@ -33,6 +33,7 @@ import { Parent2Component } from './components/parent2/parent2.component';
 import { Child2Component } from './components/child2/child2.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { QuestionComponent } from './components/question/question.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { QuestionComponent } from './components/question/question.component';
     MatCheckboxModule,
     MatRadioModule,
     FormsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
