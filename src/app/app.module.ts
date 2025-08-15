@@ -34,6 +34,8 @@ import { Child2Component } from './components/child2/child2.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { QuestionComponent } from './components/question/question.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ParentPanelComponent } from './components/parent-panel/parent-panel.component';
+import { ChildPanelComponent } from './components/child-panel/child-panel.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { MatIconModule } from '@angular/material/icon';
     Child2Component,
     QuestionnaireComponent,
     QuestionComponent,
+    ParentPanelComponent,
+    ChildPanelComponent,
   ],
   imports: [
     CommonModule,
