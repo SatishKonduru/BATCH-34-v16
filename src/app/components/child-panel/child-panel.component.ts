@@ -11,7 +11,7 @@ import {
   styleUrls: ['./child-panel.component.css'],
 })
 export class ChildPanelComponent implements AfterContentInit {
-  cPara: any;
+
   @ContentChild('contentParagraph', { static: true }) paragraph: ElementRef;
 
   ngAfterContentInit() {
