@@ -26,4 +26,11 @@ export class ModalComponent {
     this.bodyAvailable = !!this.bodyComponent;
     this.footerAvailable = !!this.footerComponent;
   }
+
+  bodyMessage: any;
+  getBodyMesage() {
+    if (this.bodyComponent) {
+      this.bodyMessage = this.bodyComponent.getBodyMessage();
+    }
+  }
 }
