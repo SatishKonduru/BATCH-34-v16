@@ -40,6 +40,8 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ModalHeaderComponent } from './components/modal-header/modal-header.component';
 import { ModalBodyComponent } from './components/modal-body/modal-body.component';
 import { ModalFooterComponent } from './components/modal-footer/modal-footer.component';
+import { StepComponent } from './components/step/step.component';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,8 @@ import { ModalFooterComponent } from './components/modal-footer/modal-footer.com
     ModalHeaderComponent,
     ModalBodyComponent,
     ModalFooterComponent,
+    StepComponent,
+    StepperComponent,
   ],
   imports: [
     CommonModule,
