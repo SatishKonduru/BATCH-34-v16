@@ -42,6 +42,8 @@ import { ModalBodyComponent } from './components/modal-body/modal-body.component
 import { ModalFooterComponent } from './components/modal-footer/modal-footer.component';
 import { StepComponent } from './components/step/step.component';
 import { StepperComponent } from './components/stepper/stepper.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { PermissionDirective } from './directives/permission.directive';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { StepperComponent } from './components/stepper/stepper.component';
     ModalFooterComponent,
     StepComponent,
     StepperComponent,
+    HighlightDirective,
+    PermissionDirective,
   ],
   imports: [
     CommonModule,
