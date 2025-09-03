@@ -1,0 +1,21 @@
+<div class="container">
+  <app-topic [topic]="'Custom Structural Directives Demo'"></app-topic>
+
+  <p appHighlight="tomato" class="box">
+    Hover me to highlight with light green color
+  </p>
+  <p appHighlight class="box">
+    Hover me to highlight with defalt color(Yellow)
+  </p>
+
+  <!--appPermission  -->
+  <div *appPermission="'admin'" class="box admin">
+    ✅ Only Visible to Admins
+  </div>
+
+  <!-- appIfNot  -->
+  <div *appIfNot="isLoggedIn" class="box guest">❌ You are not Logged In.</div>
+
+  <!-- appRepeat -->
+  <div *appRepeat="repeatCount" class="box repeat">🔄️Repeat Block</div>
+</div>

@@ -44,6 +44,9 @@ import { StepComponent } from './components/step/step.component';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { PermissionDirective } from './directives/permission.directive';
+import { HomeComponent } from './components/home/home.component';
+import { IfNotDirective } from './directives/if-not.directive';
+import { RepeatDirective } from './directives/repeat.directive';
 
 @NgModule({
   declarations: [
@@ -79,6 +82,9 @@ import { PermissionDirective } from './directives/permission.directive';
     StepperComponent,
     HighlightDirective,
     PermissionDirective,
+    HomeComponent,
+    IfNotDirective,
+    RepeatDirective,
   ],
   imports: [
     CommonModule,
