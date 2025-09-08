@@ -47,6 +47,10 @@ import { PermissionDirective } from './directives/permission.directive';
 import { HomeComponent } from './components/home/home.component';
 import { IfNotDirective } from './directives/if-not.directive';
 import { RepeatDirective } from './directives/repeat.directive';
+import { HeaderComponent } from './components/header/header.component';
+import { CourseComponent } from './components/course/course.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -85,6 +89,9 @@ import { RepeatDirective } from './directives/repeat.directive';
     HomeComponent,
     IfNotDirective,
     RepeatDirective,
+    HeaderComponent,
+    CourseComponent,
+    CourseDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -99,6 +106,7 @@ import { RepeatDirective } from './directives/repeat.directive';
     MatRadioModule,
     FormsModule,
     MatIconModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
