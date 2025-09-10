@@ -52,6 +52,7 @@ import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+
 @NgModule({
   declarations: [
     AppComponent,

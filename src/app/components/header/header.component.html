@@ -1,11 +1,23 @@
 <mat-toolbar style="background-color: whitesmoke; height: 50px">
   <span>
-    <button mat-raised-button color="primary" routerLink="/course">
+    <button mat-raised-button color="primary" routerLink="/course"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    >
+    <mat-icon class="check-icon">check</mat-icon>
       Course
     </button>
-    <button mat-raised-button color="warn" [routerLink]="'/courseDetails'">
+    <button mat-raised-button color="warn" [routerLink]="'/courseDetails'"
+    routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}">
+     <mat-icon class="check-icon">check</mat-icon>
       Course Details
     </button>
   </span>
 </mat-toolbar>
+
+<div class="container" style="border: 2px dashed green; border-radius: 5px; width: 90%; height: 60vh;">
 <router-outlet></router-outlet>
+</div>
+
+

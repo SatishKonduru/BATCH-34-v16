@@ -1,1 +1,27 @@
-<p>course-details works!</p>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      Course Details
+    </div>
+    <div class="card-body">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th *ngFor="let key of courseIds " scope="col">
+              {{key}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courseList">
+            <td *ngFor="let key of courseIds">
+              {{course[key]}}
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
