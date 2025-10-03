@@ -51,6 +51,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { DocsComponent } from './components/docs/docs.component';
 
 
 @NgModule({
@@ -93,6 +94,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HeaderComponent,
     CourseComponent,
     CourseDetailsComponent,
+    DocsComponent,
   ],
   imports: [
     CommonModule,

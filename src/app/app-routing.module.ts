@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { DocsComponent } from './components/docs/docs.component';
 
 const routes: Routes = [
   // {
@@ -22,10 +23,20 @@ const routes: Routes = [
     path: 'courseDetails',
     component: CourseDetailsComponent,
   },
+  {
+    path: 'docs',
+    component: DocsComponent,
+  },
 ];
 
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+  // useHash: true,
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, routerOptions)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
