@@ -52,6 +52,8 @@ import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DocsComponent } from './components/docs/docs.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
 
 
 @NgModule({
@@ -95,6 +97,8 @@ import { DocsComponent } from './components/docs/docs.component';
     CourseComponent,
     CourseDetailsComponent,
     DocsComponent,
+    PageNotFoundComponent,
+    SelectedCourseComponent,
   ],
   imports: [
     CommonModule,
