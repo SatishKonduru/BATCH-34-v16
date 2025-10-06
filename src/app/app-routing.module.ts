@@ -36,6 +36,11 @@ const routes: Routes = [
     path: 'selectedCourse/:course',
     component: SelectedCourseComponent,
   },
+
+  {
+    path: 'selectedCourse',
+    component: SelectedCourseComponent,
+  },
   {
     path: '**',
     component: PageNotFoundComponent,
