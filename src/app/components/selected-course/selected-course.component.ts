@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-selected-course',
@@ -8,7 +8,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SelectedCourseComponent implements OnInit {
   myCourse: any;
-  constructor(private _activatedRoute: ActivatedRoute) {}
+  constructor(
+    private _activatedRoute: ActivatedRoute,
+    private _router: Router
+  ) {}
   ngOnInit(): void {
     // for Route Parametes
     // this._activatedRoute.paramMap.subscribe((params) => {
@@ -24,5 +27,9 @@ export class SelectedCourseComponent implements OnInit {
     this._activatedRoute.queryParamMap.subscribe(
       (p) => (this.myCourse = JSON.parse(p.get('selectedCourse')))
     );
+  }
+
+  goBack() {
+    this._router.navigate(['/courseDetails', this.myCourse.id]);
   }
 }

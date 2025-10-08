@@ -8,26 +8,24 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/header', //localhost:4200/header
-  //   pathMatch: 'full',
-  // },
-  // {
-  //   path: 'header',
-  //   component: HeaderComponent,
-  // },
-
+  {
+    path: '',
+    redirectTo: '/course',
+    pathMatch: 'full',
+  },
   {
     path: 'course',
     component: CourseComponent,
   },
 
   {
+    path: 'courseDetails/:id',
+    component: CourseDetailsComponent,
+  },
+  {
     path: 'courseDetails',
     component: CourseDetailsComponent,
   },
-
   {
     path: 'docs',
     component: DocsComponent,
