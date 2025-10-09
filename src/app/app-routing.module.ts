@@ -6,6 +6,7 @@ import { CourseDetailsComponent } from './components/course-details/course-detai
 import { DocsComponent } from './components/docs/docs.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
+import { SelectedCourseDetailsComponent } from './components/selected-course-details/selected-course-details.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,12 @@ const routes: Routes = [
   {
     path: 'selectedCourse/:course',
     component: SelectedCourseComponent,
+    children: [
+      {
+        path: 'selectedCourseDetails',
+        component: SelectedCourseDetailsComponent,
+      },
+    ],
   },
 
   {
