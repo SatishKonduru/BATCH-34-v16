@@ -32,10 +32,10 @@ export class CourseDetailsComponent implements OnInit {
     console.log(this.courseIds);
   }
 
-  onSelect(course: any) {
-    console.log('Selected Course: ', course);
+  onSelect(id: any) {
+    console.log('Selected Course: ', id);
     // using Route Parameters
-    this._router.navigate(['/selectedCourse', JSON.stringify(course)]);
+    this._router.navigate(['/selectedCourse', JSON.stringify(id)]);
 
     // Using Query Parameters
     // this._router.navigate(['/selectedCourse'], {

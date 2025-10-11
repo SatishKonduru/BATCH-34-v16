@@ -14,7 +14,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let course of courseList" (click)="onSelect(course)">
+          <tr *ngFor="let course of courseList" (click)="onSelect(course.id)">
             <td *ngFor="let key of courseIds" [class]="course.id === courseId ? 'selected' : ''">
               {{course[key]}}
             </td>

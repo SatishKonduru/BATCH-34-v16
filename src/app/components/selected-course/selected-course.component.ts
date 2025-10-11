@@ -7,34 +7,42 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./selected-course.component.css'],
 })
 export class SelectedCourseComponent implements OnInit {
-  myCourse: any;
+  myCourseID: any;
+  snapshotCourseID: any;
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _router: Router
   ) {}
   ngOnInit(): void {
-
-    // using Snapshot
-  //  this.myCourse = JSON.parse( this._activatedRoute.snapshot.paramMap.get('course'))
-
-    // for Route Parametes
-    this._activatedRoute.paramMap.subscribe((params) => {
-      let getParams = params.get('course');
-      this.myCourse = JSON.parse(getParams);
+    //  ✅ Live Updates with Subscrbe
+    this._activatedRoute.paramMap.subscribe((p) => {
+      const data = p.get('id');
+      if (data) {
+        this.myCourseID = parseInt(data);
+      }
     });
 
-    // for Query Parameters OLD STYLE
-    // this._activatedRoute.queryParams.subscribe(
-    //   (p) => (this.myCourse = JSON.parse(p['selectedCourse']))
-    // );
-
-    // this._activatedRoute.queryParamMap.subscribe(
-    //   (p) => (this.myCourse = JSON.parse(p.get('selectedCourse')))
-    // );
+    // ❌ Snapshot
+    const snapshotData = this._activatedRoute.snapshot.paramMap.get('id');
+    if (snapshotData) {
+      this.snapshotCourseID = parseInt(snapshotData);
+    }
   }
 
   goBack() {
-    this._router.navigate(['/courseDetails', this.myCourse.id]);
+    this._router.navigate(['/courseDetails', this.myCourseID]);
+  }
+
+  previousCourse() {
+    const prevId = this.myCourseID - 1;
+    if (prevId < 1) return alert('No Previoius Course');
+
+    this._router.navigate(['/selectedCourse', JSON.stringify(prevId)]);
+  }
+  nextCourse() {
+    const nextId = this.myCourseID + 1;
+    if (nextId > 5) return alert('No Next Course');
+    this._router.navigate(['/selectedCourse', JSON.stringify(nextId)]);
   }
   viewDetails() {
     this._router.navigate(['selectedCourseDetails'], {
