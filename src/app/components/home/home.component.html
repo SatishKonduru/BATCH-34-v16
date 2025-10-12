@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <app-topic [topic]="'Custom Structural Directives Demo'"></app-topic>
 
   <p appHighlight="tomato" class="box">
@@ -8,14 +8,29 @@
     Hover me to highlight with defalt color(Yellow)
   </p>
 
-  <!--appPermission  -->
+
   <div *appPermission="'admin'" class="box admin">
     ✅ Only Visible to Admins
   </div>
 
-  <!-- appIfNot  -->
+
   <div *appIfNot="isLoggedIn" class="box guest">❌ You are not Logged In.</div>
 
-  <!-- appRepeat -->
+
   <div *appRepeat="repeatCount" class="box repeat">🔄️Repeat Block</div>
+</div> -->
+
+<div class="container">
+  <div class="mt-3">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Something...</mat-label>
+      <input matInput #input placeholder="Enter Something">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-stroked-button color="warn" (click)="onClick(input.value)">Click Me</button>
+  </div>
+  <app-demo [message]="inputValue"></app-demo>
+<!--
+  <app-demo></app-demo> -->
 </div>
