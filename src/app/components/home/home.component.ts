@@ -1,23 +1,27 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnChanges {
+export class HomeComponent implements OnChanges, OnInit {
   // isLoggedIn = false;
   // repeatCount = 5;
-  inputValue = ['RSK'];
+  inputValue = 'RSK';
   constructor() {
     // console.log('Home Constructor called...');
   }
   onClick(value: any) {
-    // this.inputValue = value;
-    this.inputValue.push(value);
+    this.inputValue = value;
+    // this.inputValue.push(value);
   }
 
   ngOnChanges() {
-    console.log("Home's OnChanges called");
+    //  console.log("Home's OnChanges called");
+  }
+
+  ngOnInit() {
+    // console.log("Home's OnInit called...");
   }
 }
