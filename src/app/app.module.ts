@@ -56,6 +56,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
 import { SelectedCourseDetailsComponent } from './components/selected-course-details/selected-course-details.component';
 import { DemoComponent } from './components/demo/demo.component';
+import { Comp1Component } from './components/comp1/comp1.component';
+import { Comp2Component } from './components/comp2/comp2.component';
 
 
 @NgModule({
@@ -103,6 +105,8 @@ import { DemoComponent } from './components/demo/demo.component';
     SelectedCourseComponent,
     SelectedCourseDetailsComponent,
     DemoComponent,
+    Comp1Component,
+    Comp2Component,
   ],
   imports: [
     CommonModule,
