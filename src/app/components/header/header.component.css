@@ -1,4 +1,4 @@
-/* .active{
+.active{
   background-color: green !important;
   color: #fff !important;
   width: 180px;
@@ -10,10 +10,10 @@
   font-size: 20px;
   font-weight: bold;
   position: absolute
-} */
+}
 
 
-/* button .check-icon{
+ button .check-icon{
   display: none;
   margin-right: 8px;
 }
@@ -25,6 +25,6 @@ button.active .check-icon{
   display: inline-flex;
   color: #fff;
   font-weight: 700;
-} */
+}
 
 

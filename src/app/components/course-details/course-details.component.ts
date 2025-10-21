@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-course-details',
@@ -9,27 +10,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CourseDetailsComponent implements OnInit {
   constructor(
     private _router: Router,
-    private _activatedRoute: ActivatedRoute
+    private _activatedRoute: ActivatedRoute,
+    private _courseService: CourseService
   ) {}
-  courseList = [
-    { id: 1, name: 'Angular', tutor: 'Satish' },
-    { id: 2, name: 'React', tutor: 'RSK' },
-    { id: 3, name: 'Angular Materail', tutor: 'Satish Konduru' },
-    { id: 4, name: 'Bootstrap', tutor: 'Renu' },
-    { id: 5, name: 'NodeJS', tutor: 'Nagesh' },
-  ];
+  courseList = [];
 
   courseIds: string[] = [];
   courseId: number;
   ngOnInit() {
+    this.getCourseDetails();
+
     this._activatedRoute.paramMap.subscribe((params) => {
       if (params) {
         this.courseId = parseInt(params.get('id'));
       }
     });
 
-    this.courseIds = Object.keys(this.courseList[0]);
-    console.log(this.courseIds);
+    // this.courseIds = Object.keys(this.courseList[0]);
+    // console.log(this.courseIds);
   }
 
   onSelect(id: any) {
@@ -41,5 +39,12 @@ export class CourseDetailsComponent implements OnInit {
     // this._router.navigate(['/selectedCourse'], {
     //   queryParams: { selectedCourse: JSON.stringify(course) },
     // });
+  }
+
+  getCourseDetails() {
+    this._courseService.courseNames().subscribe((res) => {
+      this.courseList = res;
+      this.courseIds = Object.keys(this.courseList[0]);
+    });
   }
 }

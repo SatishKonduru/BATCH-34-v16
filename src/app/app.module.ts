@@ -58,7 +58,8 @@ import { SelectedCourseDetailsComponent } from './components/selected-course-det
 import { DemoComponent } from './components/demo/demo.component';
 import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp2Component } from './components/comp2/comp2.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CourseService } from './services/course.service';
 
 @NgModule({
   declarations: [
@@ -122,8 +123,9 @@ import { Comp2Component } from './components/comp2/comp2.component';
     FormsModule,
     MatIconModule,
     MatToolbarModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
