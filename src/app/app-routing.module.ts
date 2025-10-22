@@ -10,15 +10,15 @@ import { SelectedCourseDetailsComponent } from './components/selected-course-det
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/header',
-  //   pathMatch: 'full',
-  // },
-  // {
-  //   path: 'header',
-  //   component: HeaderComponent,
-  // },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'header',
+    component: HeaderComponent,
+  },
   {
     path: 'home',
     component: HomeComponent,
