@@ -60,6 +60,9 @@ import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp2Component } from './components/comp2/comp2.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CourseService } from './services/course.service';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -108,6 +111,8 @@ import { CourseService } from './services/course.service';
     DemoComponent,
     Comp1Component,
     Comp2Component,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -125,7 +130,7 @@ import { CourseService } from './services/course.service';
     MatToolbarModule,
     HttpClientModule,
   ],
-  providers: [CourseService],
+  providers: [CourseService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
