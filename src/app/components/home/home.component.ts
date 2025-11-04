@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, ViewEncapsulation } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnChanges, OnInit {
   inputValue = 'RSK';
   myInputValue: any;
   count = 0;
-  constructor() {
+  constructor(private _authService: AuthService) {
     // console.log('Home Constructor called...');
   }
   onClick(value: any) {
@@ -28,5 +29,17 @@ export class HomeComponent implements OnChanges, OnInit {
   ngOnInit() {
     // console.log("Home's OnInit called...");
     setInterval(() => this.count++, 1000);
+  }
+  loginAsAdmin() {
+    this._authService.login('admin');
+    alert('Logged in As Admin ✅');
+  }
+  logout() {
+    this._authService.logout();
+    alert('Loggged Out ');
+  }
+  loginAsUser() {
+    this._authService.login('user');
+    alert('Logged in As User ✅');
   }
 }

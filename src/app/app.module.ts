@@ -63,6 +63,10 @@ import { CourseService } from './services/course.service';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.component';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +117,10 @@ import { AuthService } from './services/auth.service';
     Comp2Component,
     LoginComponent,
     DashboardComponent,
+    AdminDashboardComponent,
+    AdminUsersComponent,
+    AdminSettingsComponent,
+    UnauthorizedComponent,
   ],
   imports: [
     CommonModule,

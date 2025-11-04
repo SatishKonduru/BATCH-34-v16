@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
+  CanActivateChild,
   Router,
   RouterStateSnapshot,
   UrlTree,
@@ -15,11 +16,12 @@ import { AuthService } from '../services/auth.service';
 export class AuthGuard implements CanActivate {
   constructor(private _authService: AuthService, private _router: Router) {}
   canActivate(): boolean | UrlTree {
-    const loggedIn = this._authService.isLoggedIn();
-    if (!loggedIn) {
-      // redirect to login page
-      return this._router.createUrlTree(['/login']);
-    }
-    return true; //allow access
+    // const loggedIn = this._authService.isLoggedIn();
+    // if (!loggedIn) {
+    //   // redirect to login page
+    //   return this._router.createUrlTree(['/login']);
+    // }
+    // return true; //allow access
+    return;
   }
 }
