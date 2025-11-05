@@ -16,6 +16,8 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { AdminGuard } from './guards/admin.guard';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { CanDeactivatedGuard } from './guards/can-deactivate.guard';
 
 const routes: Routes = [
   {
@@ -93,6 +95,11 @@ const routes: Routes = [
         component: AdminSettingsComponent,
       },
     ],
+  },
+  {
+    path: 'edit-profile',
+    component: EditProfileComponent,
+    canDeactivate: [CanDeactivatedGuard],
   },
   {
     path: '**',

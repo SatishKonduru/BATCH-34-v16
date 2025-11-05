@@ -67,6 +67,7 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +122,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
     AdminUsersComponent,
     AdminSettingsComponent,
     UnauthorizedComponent,
+    EditProfileComponent,
   ],
   imports: [
     CommonModule,
