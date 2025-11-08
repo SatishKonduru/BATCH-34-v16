@@ -68,6 +68,7 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -123,6 +124,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     AdminSettingsComponent,
     UnauthorizedComponent,
     EditProfileComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
