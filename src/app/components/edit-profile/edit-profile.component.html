@@ -27,11 +27,35 @@
     <div class="form-group row col-10">
      <mat-form-field appearance="outline">
       <mat-label>Email: </mat-label>
-      <input matInput type="email" name="name"
-      [(ngModel)]="user.name"
+      <input matInput type="email" name="email"
+      [(ngModel)]="user.email"
       (ngModelChange)="onInputChange()"
       required>
      </mat-form-field>
     </div>
+    <div class="form-group row col-10">
+     <mat-form-field appearance="outline">
+      <mat-label>Bio: </mat-label>
+      <textarea matInput
+      name="bio"
+      [(ngModel)]="user.bio"
+      (ngModelChange)="onInputChange()"
+      rows="3"></textarea>
+     </mat-form-field>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button mat-raised-button color="warn"
+        (click)="saveChanges()"
+        >Save Changes</button>
+      </div>
+      <div class="col-6">
+        <button mat-button color="primary"
+        [routerLink]="['/home']">Home</button>
+      </div>
+    </div>
   </form>
+  <h2 *ngIf="!isSaved">
+    ⚠️ You have unsaved changes
+  </h2>
 </div>
