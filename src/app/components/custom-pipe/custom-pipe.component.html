@@ -1,0 +1,9 @@
+<div class="container">
+  <h6>Name: {{ name }}</h6>
+  <h6>Score: {{ score }}</h6>
+  <h6>Total: {{ total }}</h6>
+  <h3>Percentage : {{ score / total }}</h3>
+  <h2 class="text-danger">
+    Percentage with custom-pipe: {{ score | percentage : total : 3 }}
+  </h2>
+</div>

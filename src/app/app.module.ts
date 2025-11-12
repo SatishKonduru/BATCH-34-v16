@@ -70,6 +70,10 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
+import { PercentagePipe } from './pipes/percentage.pipe';
+
+import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,6 +129,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     UnauthorizedComponent,
     EditProfileComponent,
     ConfirmDialogComponent,
+    BuiltInPipesComponent,
+    PercentagePipe,
+
+    CustomPipeComponent,
   ],
   imports: [
     MatDialogModule,

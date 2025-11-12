@@ -1,0 +1,29 @@
+<div class="container">
+  <p>'Satish' in Uppercase: {{ "Satish" | uppercase }}</p>
+  <p>'SATISH' in Uppercase: {{ "SATISH" | lowercase }}</p>
+  <p>'satish konduru' in Uppercase: {{ "satish konduru" | titlecase }}</p>
+  <p>'emp' Object : {{ emp | json }}</p>
+  <p>1234 number with comma: {{ 1234 | number }}</p>
+  <p>1234 number with comma: {{ 1234 | number : "1.2" }}</p>
+  <p>1234 number with comma: {{ 1234 | number : "5.2" }}</p>
+  <p>1234 number with comma: {{ 1234.567 | number : "3.1-2" }}</p>
+  <p>0.67 in percentage : {{ 0.67 | percent }}</p>
+  <p>Date: {{ todayDate }}</p>
+  <p>Date: {{ todayDate | date }}</p>
+  <p>Date: {{ todayDate | date : "dd/MM/YYYY" }}</p>
+  <p>Date: {{ todayDate | date : "MM/dd/YYYY" }}</p>
+  <p>Date: {{ todayDate | date : "short" }}</p>
+  <p>Date: {{ todayDate | date : "shortDate" }}</p>
+  <p>Date: {{ todayDate | date : "mediumDate" }}</p>
+  <p>Date: {{ todayDate | date : "longDate" }}</p>
+  <p>Date: {{ todayDate | date : "long" }}</p>
+  <p>Date: {{ todayDate | date : "full" }}</p>
+  <p>Date: {{ todayDate | date : "fullDate" }}</p>
+  <p>Date: {{ todayDate | date : "shortTime" }}</p>
+  <p>Date: {{ todayDate | date : "mediumTime" }}</p>
+  <p>Date: {{ todayDate | date : "fullTime" }}</p>
+
+  <p>25000 in Currency: {{ 25000 | currency }}</p>
+  <p>25000 in Currency: {{ 25000 | currency : "INR" }}</p>
+  <p>25000 in Currency: {{ 25000 | currency : "EUR" }}</p>
+</div>

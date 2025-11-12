@@ -18,6 +18,8 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { AdminGuard } from './guards/admin.guard';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { CanDeactivatedGuard } from './guards/can-deactivate.guard';
+import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
+import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 
 const routes: Routes = [
   {
@@ -100,6 +102,14 @@ const routes: Routes = [
     path: 'edit-profile',
     component: EditProfileComponent,
     canDeactivate: [CanDeactivatedGuard],
+  },
+  {
+    path: 'built-in-pipes',
+    component: BuiltInPipesComponent,
+  },
+  {
+    path: 'custom-pipe',
+    component: CustomPipeComponent,
   },
   {
     path: '**',
