@@ -74,6 +74,7 @@ import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipe
 import { PercentagePipe } from './pipes/percentage.pipe';
 
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
+import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -133,6 +134,7 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
     PercentagePipe,
 
     CustomPipeComponent,
+      FilterPipe,
   ],
   imports: [
     MatDialogModule,
