@@ -7,16 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './components/test/test.component';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { StyleBindingComponent } from './components/style-binding/style-binding.component';
 import { CommonModule } from '@angular/common';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatRadioModule } from '@angular/material/radio';
+
 import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-ref-variables.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
@@ -33,7 +29,7 @@ import { Parent2Component } from './components/parent2/parent2.component';
 import { Child2Component } from './components/child2/child2.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { QuestionComponent } from './components/question/question.component';
-import { MatIconModule } from '@angular/material/icon';
+
 import { ParentPanelComponent } from './components/parent-panel/parent-panel.component';
 import { ChildPanelComponent } from './components/child-panel/child-panel.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -50,7 +46,7 @@ import { RepeatDirective } from './directives/repeat.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { DocsComponent } from './components/docs/docs.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
@@ -69,12 +65,14 @@ import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.co
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
-import { MatDialogModule } from '@angular/material/dialog';
+
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { PercentagePipe } from './pipes/percentage.pipe';
 
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ELearningHomeModule } from './modules/e-learning-home/e-learning-home.module';
+import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -134,24 +132,19 @@ import { FilterPipe } from './pipes/filter.pipe';
     PercentagePipe,
 
     CustomPipeComponent,
-      FilterPipe,
+    FilterPipe,
   ],
   imports: [
-    MatDialogModule,
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatRadioModule,
+
     FormsModule,
-    MatIconModule,
-    MatToolbarModule,
+
     HttpClientModule,
+    ELearningHomeModule,
+    AngularMaterialModule,
   ],
   providers: [CourseService, AuthService],
   bootstrap: [AppComponent],

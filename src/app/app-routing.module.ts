@@ -112,6 +112,27 @@ const routes: Routes = [
     component: CustomPipeComponent,
   },
   {
+    path: 'e-learning-courses',
+    loadChildren: () =>
+      import('./modules/e-learning-courses/e-learning-courses.module').then(
+        (m) => m.ELearningCoursesModule
+      ),
+  },
+  {
+    path: 'e-learning-admin',
+    loadChildren: () =>
+      import('./modules/e-learning-admin/e-learning-admin.module').then(
+        (m) => m.ELearningAdminModule
+      ),
+  },
+  {
+    path: 'e-learning-auth',
+    loadChildren: () =>
+      import('./modules/e-learning-auth/e-learning-auth.module').then(
+        (m) => m.ELearningAuthModule
+      ),
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   },
