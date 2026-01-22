@@ -73,6 +73,8 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
 import { FilterPipe } from './pipes/filter.pipe';
 import { ELearningHomeModule } from './modules/e-learning-home/e-learning-home.module';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+import { TdfRegisterComponent } from './forms/tdf-register/tdf-register.component';
+import { NativeDateAdapter } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -133,20 +135,19 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
 
     CustomPipeComponent,
     FilterPipe,
+    TdfRegisterComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     FormsModule,
-
     HttpClientModule,
     ELearningHomeModule,
     AngularMaterialModule,
   ],
-  providers: [CourseService, AuthService],
+  providers: [CourseService, AuthService, NativeDateAdapter],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

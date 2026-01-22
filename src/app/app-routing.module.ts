@@ -20,6 +20,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { CanDeactivatedGuard } from './guards/can-deactivate.guard';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
+import { TdfRegisterComponent } from './forms/tdf-register/tdf-register.component';
 
 const routes: Routes = [
   {
@@ -115,21 +116,26 @@ const routes: Routes = [
     path: 'e-learning-courses',
     loadChildren: () =>
       import('./modules/e-learning-courses/e-learning-courses.module').then(
-        (m) => m.ELearningCoursesModule
+        (m) => m.ELearningCoursesModule,
       ),
   },
   {
     path: 'e-learning-admin',
     loadChildren: () =>
       import('./modules/e-learning-admin/e-learning-admin.module').then(
-        (m) => m.ELearningAdminModule
+        (m) => m.ELearningAdminModule,
       ),
+  },
+
+  {
+    path: 'tdfRegister',
+    component: TdfRegisterComponent,
   },
   {
     path: 'e-learning-auth',
     loadChildren: () =>
       import('./modules/e-learning-auth/e-learning-auth.module').then(
-        (m) => m.ELearningAuthModule
+        (m) => m.ELearningAuthModule,
       ),
   },
   {

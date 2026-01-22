@@ -1,0 +1,166 @@
+<div class="container mt-3 mx-auto">
+  <div class="mat-elevation-z10 -p2 rounded-3">
+    <div class="row">
+      <h3>Register Form(TDF)</h3>
+    </div>
+
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <!-- First name and Last name -->
+      <div class="row mt-3 p-2">
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>First Name </mat-label>
+            <input
+              matInput
+              ngModel
+              name="firstname"
+              required
+              #firstNameCtrl="ngModel"
+            />
+            <mat-error *ngIf="firstNameCtrl.touched && firstNameCtrl.invalid">
+              First Name is Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Last Name</mat-label>
+            <input
+              matInput
+              ngModel
+              name="lastname"
+              required
+              #lastNameCtrl="ngModel"
+            />
+            <mat-error *ngIf="lastNameCtrl.touched && lastNameCtrl.invalid">
+              Last name is Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="row p-2">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            ngModel
+            name="email"
+            required
+            email
+            #emailCtrl="ngModel"
+          />
+          <mat-error
+            *ngIf="emailCtrl.touched && emailCtrl.errors?.['required']"
+          >
+            Email is requried
+          </mat-error>
+          <mat-error *ngIf="emailCtrl.touched && emailCtrl.errors?.['email']">
+            Invalid Email format
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <!-- Phone and DOB -->
+      <div class="row p-2">
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Phone</mat-label>
+            <input matInput ngModel name="phone" />
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" ngModel name="dob" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div class="row p-2">
+        <mat-label>Gender</mat-label>
+        <mat-radio-group color="primary" [ngModel]="'Male'" name="gender">
+          <mat-radio-button value="Male" checked>Male</mat-radio-button>
+          <mat-radio-button value="Female">Female</mat-radio-button>
+          <mat-radio-button value="Other">Prefer Not to Say</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <!-- Address -->
+      <mat-label>Address:</mat-label>
+      <!-- for Address 1 -->
+      <div class="row p-2">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Address 1</mat-label>
+          <input matInput ngModel name="address1" />
+        </mat-form-field>
+      </div>
+      <!-- for Address 2 -->
+      <div class="row p-2">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Address 2</mat-label>
+          <input matInput ngModel name="address2" />
+        </mat-form-field>
+      </div>
+      <!-- For Country and State -->
+      <div class="row p-2">
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Select Country</mat-label>
+            <mat-select ngModel name="country">
+              <mat-option value="INDIA">India</mat-option>
+              <mat-option value="USA">USA</mat-option>
+              <mat-option value="Australia">Australia</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Select State</mat-label>
+            <mat-select ngModel name="state">
+              <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
+              <mat-option value="Telangana">Telangana</mat-option>
+              <mat-option value="Tamilnadu">Tamilnadu</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row p-2">
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>City</mat-label>
+            <input matInput ngModel name="city" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-6">
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Pincode</mat-label>
+            <input matInput ngModel name="pincode" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row m-3">
+        <div class="text-center">
+          <button
+            mat-raised-button
+            color="primary"
+            class="mb-3"
+            type="submit"
+            [disabled]="!(registerForm.dirty && registerForm.valid)"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
