@@ -95,19 +95,27 @@
       <!-- Address -->
       <mat-label>Address:</mat-label>
       <!-- for Address 1 -->
-      <div class="row p-2">
-        <mat-form-field appearance="outline" style="width: 100%">
-          <mat-label>Address 1</mat-label>
-          <input matInput ngModel name="address1" />
-        </mat-form-field>
-      </div>
-      <!-- for Address 2 -->
-      <div class="row p-2">
-        <mat-form-field appearance="outline" style="width: 100%">
-          <mat-label>Address 2</mat-label>
-          <input matInput ngModel name="address2" />
-        </mat-form-field>
-      </div>
+       <div class="row p-2" ngModelGroup="address" #addr = "ngModelGroup">
+            <div class="row p-2">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Address 1</mat-label>
+              <input matInput ngModel name="address1" />
+            </mat-form-field>
+          </div>
+          <!-- for Address 2 -->
+          <div class="row p-2">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Address 2</mat-label>
+              <input matInput ngModel name="address2"  required/>
+            </mat-form-field>
+          </div>
+       </div>
+       <div *ngIf="addr.invalid">
+        <span style="color: red">
+          Some Address fields are missing
+        </span>
+       </div>
+
       <!-- For Country and State -->
       <div class="row p-2">
         <div class="col-6">

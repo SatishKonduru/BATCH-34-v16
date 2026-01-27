@@ -8,6 +8,6 @@ import { NgForm } from '@angular/forms';
 })
 export class TdfRegisterComponent {
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    console.log(form.controls.address.value.address1);
   }
 }
