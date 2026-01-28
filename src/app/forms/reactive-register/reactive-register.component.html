@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="mat-elevation-z10 mt-4 mx-auto col-12 rounded-3">
+    <div class="col-10 text-center mb-4">
+      <h5>Reactive Form</h5>
+    </div>
+    <div class="col-6 mx-auto">
+      <form>
+        <div class="col-6">
+          <!-- username -->
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <!-- Email -->
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <!-- Gender -->
+          <mat-label>Gender</mat-label>
+          <mat-radio-group>
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div class="col-6">
+          <!-- Country -->
+          <mat-form-field appearance="outline">
+            <mat-label>Select</mat-label>
+            <mat-select>
+              <mat-option value="INDIA">INDIA</mat-option>
+              <mat-option value="USA">USA</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <!-- Checkbox-->
+          <mat-checkbox>I agree to terms & conditions</mat-checkbox>
+        </div>
+        <div class="col-6 text-center p-4">
+          <button mat-stroked-button color="primary" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

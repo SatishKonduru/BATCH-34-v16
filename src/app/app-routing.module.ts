@@ -21,6 +21,7 @@ import { CanDeactivatedGuard } from './guards/can-deactivate.guard';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { TdfRegisterComponent } from './forms/tdf-register/tdf-register.component';
+import { ReactiveRegisterComponent } from './forms/reactive-register/reactive-register.component';
 
 const routes: Routes = [
   {
@@ -130,6 +131,10 @@ const routes: Routes = [
   {
     path: 'tdfRegister',
     component: TdfRegisterComponent,
+  },
+  {
+    path: 'reactiveRegister',
+    component: ReactiveRegisterComponent,
   },
   {
     path: 'e-learning-auth',
