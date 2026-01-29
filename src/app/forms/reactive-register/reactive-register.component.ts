@@ -1,5 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormArray,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-register',
@@ -16,7 +22,33 @@ export class ReactiveRegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       gender: ['male'],
       country: ['', Validators.required],
+      address: new FormGroup({
+        address1 : new FormControl(null),
+        address2 : new FormControl(null),
+        city: new FormControl(null),
+        pincode: new FormControl(null)
+      }),
+
+      skills: new FormArray([
+        new FormControl(null),
+
+
+      ]),
       agree: [false, Validators.requiredTrue],
+
+
     });
+  }
+
+  onSubmit() {
+    console.log(this.registerForm.value);
+  }
+
+  addSkill(){
+      (<FormArray>this.registerForm.controls.skills).push(new FormControl(null))
+  }
+
+  deleteSkill(index: number){
+    (<FormArray>this.registerForm.controls.skills).removeAt(index)
   }
 }
